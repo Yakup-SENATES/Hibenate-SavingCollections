@@ -6,12 +6,12 @@ import java.util.Set;
 import javax.persistence.*;
 
 
-@Entity // veritabaný nesnesi olduðunu belirtir
+@Entity 
 @Table(name = "city")
 public class City {
 
 	@Id	 @Column(name = "ID") 
-	//@GeneratedValue(strategy = GenerationType.AUTO)
+	
 	private int id;
 
 	@Column(name = "Population")
