@@ -39,11 +39,12 @@ public class Main {
 			Adress addr = new Adress();
 			Adress addr2 = new Adress();
 					
-			addr2.setStreet("SEcond street");
-			addr2.setState("second State");
+			addr2.setStreet("Second street");
+			addr2.setState("Second State");
 			addr2.setPincode("0123");
+			
 			addr.setStreet("Street");
-			addr.setState("Türkiye");
+			addr.setState("TÃ¼rkiye");
 			addr.setPincode("0101"); 
 			
 			
@@ -52,55 +53,10 @@ public class Main {
 			
 			session.save(city);
 			
-//-----------------READ---------------------
-//			List<String> countryCodes = 
-//					session.createQuery("select c.countryCode FROM City c GROUP BY c.countryCode").getResultList();
-//	 
-//			for (String countryString : countryCodes) {
-//				
-//				//System.out.println(countryString);
-//			}
-//			City city = new City() ; 
-//			city=				
-//			session.get(City.class, 1);
-//			
-//			System.out.println(city.getDistrict());
 			
-			
-//	--------------INSERT--------------------
-//			City city = new City();
-//			
-//			city.setName("Test1");
-//			
-//			city.setCountryCode("TUR");
-//			
-//			city.setDistrict("Akdeniz");
-//			
-//			
-//			city.setPopulation(215000);
-//
-//			//multiple record
-//		
-//			session.save(city);
-//			
-			
-//----------------UPDATE----------------------------
-			
-//			City city = session.get(City.class, 4088);
-//			
-//			city.setName("Zalimli");
-//			
-//			session.save(city);
-			
-//---------------Delete-------------------------
-//			City city = session.get(City.class, 4088); 
-//			
-//			session.delete(city);
-//			
-//			
 			session.getTransaction().commit();
 			
-			//System.out.println("Deleted");
+			
 			
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -117,16 +73,4 @@ public class Main {
 
 
 
-//Select/*from
-
-//from City c where c.countryCode='TUR' AND c.district='AKdeniz'
-//from City c where c.name LIKE '%kar%'
-//from City c order by c.name default olarak asc gelir (ascending) tersten sýralamak için descending kullanýlýr
-
-/*			List<City> cities = session.createQuery("from City c order by c.name desc").getResultList();
-
-for (City city : cities) {
 	
-	System.out.println(city.getName());
-}
-*/	
